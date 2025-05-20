@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ServiceStation } from '../types';
 import { formatPercent, formatTime } from '../utils/formatters';
-import { ChevronDown, ChevronUp, AlertCircle, Clock } from 'lucide-react';
+import { ChevronDown, AlertCircle } from 'lucide-react';
 
 interface ServiceStationNodeProps {
   station: ServiceStation;

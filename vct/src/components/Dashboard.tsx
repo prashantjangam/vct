@@ -3,7 +3,7 @@ import JourneyFlow from './JourneyFlow';
 import MetricsCards from './MetricsCards';
 import { journeyData } from '../data/journeys';
 import { getJourneyMetrics } from '../data/metrics';
-import { Users, Clock, ChevronDown, ChevronUp, BarChart2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, BarChart2 } from 'lucide-react';
 import { Journey, SubJourney } from '../types';
 
 const Dashboard: React.FC = () => {
@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
   const renderJourneyFlow = (journey: Journey | SubJourney, isSubJourney = true) => (
     <div className={`space-y-4 ${isSubJourney ? 'ml-8 mt-4' : ''}`}>
   
-      <JourneyFlow journey={journey} />
+      <JourneyFlow subJourneys={isSubJourney} journey={journey} />
     </div>
   );
   

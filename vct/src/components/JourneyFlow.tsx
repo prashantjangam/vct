@@ -1,11 +1,11 @@
 import React from 'react';
-import { Journey } from '../types';
+import { Journey, SubJourney } from '../types';
 import ServiceStationNode from './ServiceStationNode';
-import { formatPercent, formatTime } from '../utils/formatters';
 import { Clock, Users, Train } from 'lucide-react';
 
 interface JourneyFlowProps {
-  journey: Journey;
+  isSubJourney?: boolean,
+  journey: Journey | SubJourney;
 }
 
 const JourneyFlow: React.FC<JourneyFlowProps> = ({ journey }) => {
